@@ -1,0 +1,70 @@
+<mat-card>
+    <mat-card-title><p>Register</p></mat-card-title>
+    <mat-card-content>
+        <form [formGroup] = 'regDetailsForm'>
+
+            <div fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="50px" fxLayoutGap.xs="0">
+                <div fxFlex = "50%">
+                    <mat-form-field class="full-width">
+                        <mat-label>  <i class="fas fa-file-signature"></i>
+                            <!-- <i class="fas fa-envelope fa-1x"> </i> -->
+                            Firstname
+                        </mat-label>
+                        <input formControlName='firstname' matInput placeholder="Firstname" [(ngModel)]="firstname" name="firstname" required>
+                    </mat-form-field>
+                    </div>
+                    <div fxFlex = "50%">
+                            <mat-form-field class="full-width">
+                     <mat-label> <i class="fas fa-file-signature"></i>
+                         <!-- <i class="fas fa-envelope fa-1x"> </i> -->
+                        Lastname
+                    </mat-label>
+                    <input formControlName='lastname' matInput placeholder="Lastname" [(ngModel)]="lastname" name="lastname" required>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <p>
+                <mat-form-field class="full-width">
+                    <mat-label> <i class="fas fa-envelope fa-1x"> </i>
+                        Email
+                    </mat-label>
+                    <input formControlName='email' matInput placeholder="Email" [(ngModel)]="email" name="email" required>
+                </mat-form-field>
+            </p>
+
+            <p>
+                <mat-form-field class="full-width">
+                    <mat-label> <i class="fas fa-key fa-1x"> </i>
+                        Password
+                    </mat-label>
+                    <input formControlName='password' matInput type='password' placeholder="Password" [(ngModel)]="password" name="password"
+                        required>
+                </mat-form-field>
+            </p>
+
+            <p>
+                <mat-form-field class="full-width">
+                    <mat-label> <i class="fas fa-mobile-alt"></i>
+                        <!-- <i class="fas fa-envelope fa-1x"> </i> -->
+                        PhoneNumber
+                    </mat-label>
+                    <input formControlName='phonenumber' matInput placeholder="PhoneNumber" [(ngModel)]="phonenumber" name="phonenumber" required>
+                </mat-form-field>
+            </p>
+
+            <p>
+                <mat-form-field class="full-width">
+                    <mat-label> <i class="fas fa-envelope fa-1x"> </i>
+                        #SSN
+                    </mat-label>
+                    <input formControlName='ssn' matInput placeholder="Ssn" [(ngModel)]="ssn" name="ssn" required>
+                </mat-form-field>
+            </p>
+
+        </form>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button (click)="reg()" color="primary"  >Register</button>
+    </mat-card-actions>
+</mat-card>
